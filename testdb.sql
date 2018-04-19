@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2018 at 02:57 AM
+-- Generation Time: Apr 20, 2018 at 01:57 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -46,7 +46,8 @@ INSERT INTO `customers` (`ID`, `NAME`, `AGE`, `ADDRESS`, `SALARY`) VALUES
 (3, 'kaushik', 23, 'Kota', '2000.00'),
 (4, 'Chaitali', 25, 'Mumbai', '6500.00'),
 (5, 'Hardik', 27, 'Bhopal', '8500.00'),
-(6, 'Komal', 22, 'VN', '10000.00');
+(6, 'Komal', 22, 'VN', '10000.00'),
+(7, 'Hieutran', 1, 'DaNang', '2000.00');
 
 --
 -- Indexes for dumped tables

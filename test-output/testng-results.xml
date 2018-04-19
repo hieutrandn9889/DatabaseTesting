@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="680" started-at="2018-04-19T00:53:29Z" finished-at="2018-04-19T00:53:29Z">
+  <suite name="Default suite" duration-ms="690" started-at="2018-04-19T23:57:02Z" finished-at="2018-04-19T23:57:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="680" started-at="2018-04-19T00:53:29Z" finished-at="2018-04-19T00:53:29Z">
+    <test name="Default test" duration-ms="690" started-at="2018-04-19T23:57:02Z" finished-at="2018-04-19T23:57:03Z">
       <class name="tcLogin.database">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tcLogin.database@1c62251]" name="setUp" is-config="true" duration-ms="499" started-at="2018-04-19T07:53:29Z" finished-at="2018-04-19T07:53:29Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tcLogin.database@17fd0e6]" name="setUp" is-config="true" duration-ms="520" started-at="2018-04-20T06:57:02Z" finished-at="2018-04-20T06:57:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="queryUpdateCustomer()[pri:0, instance:tcLogin.database@1c62251]" name="queryUpdateCustomer" duration-ms="95" started-at="2018-04-19T07:53:29Z" finished-at="2018-04-19T07:53:29Z">
+        <test-method status="PASS" signature="queryUpdateCustomer()[pri:0, instance:tcLogin.database@17fd0e6]" name="queryUpdateCustomer" duration-ms="87" started-at="2018-04-20T06:57:02Z" finished-at="2018-04-20T06:57:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryUpdateCustomer -->
-        <test-method status="PASS" signature="testqueryShowCustomers()[pri:0, instance:tcLogin.database@1c62251]" name="testqueryShowCustomers" duration-ms="48" started-at="2018-04-19T07:53:29Z" finished-at="2018-04-19T07:53:29Z">
+        <test-method status="PASS" signature="testqueryShowCustomers()[pri:0, instance:tcLogin.database@17fd0e6]" name="testqueryShowCustomers" duration-ms="45" started-at="2018-04-20T06:57:02Z" finished-at="2018-04-20T06:57:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testqueryShowCustomers -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tcLogin.database@1c62251]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-04-19T07:53:29Z" finished-at="2018-04-19T07:53:29Z">
+        <test-method status="PASS" signature="testqueryShowCustomersWithID()[pri:0, instance:tcLogin.database@17fd0e6]" name="testqueryShowCustomersWithID" duration-ms="6" started-at="2018-04-20T06:57:03Z" finished-at="2018-04-20T06:57:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testqueryShowCustomersWithID -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tcLogin.database@17fd0e6]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-04-20T06:57:03Z" finished-at="2018-04-20T06:57:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

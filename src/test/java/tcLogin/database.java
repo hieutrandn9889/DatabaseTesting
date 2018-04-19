@@ -7,6 +7,40 @@ import java.sql.ResultSet;
 import java.sql.DriverManager;
 
 public class database {
+	// SQL
+	// CREATECR DATABASE testDB;
+	// USE testDB;
+	//
+	// CREATE TABLE CUSTOMERS(
+	// ID INT NOT NULL,
+	// NAME VARCHAR (20) NOT NULL,
+	// AGE INT NOT NULL,
+	// ADDRESS CHAR (25) ,
+	// SALARY DECIMAL (18, 2),
+	// PRIMARY KEY (ID)
+	// );
+	//
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (1, 'Ramesh',
+	// 32, 'Ahmedabad', 2000.00 );
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (2, 'Khilan',
+	// 25, 'Delhi', 1500.00 );
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (3, 'kaushik',
+	// 23, 'Kota', 2000.00 );
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (4, 'Chaitali',
+	// 25, 'Mumbai', 6500.00 );
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (5, 'Hardik',
+	// 27, 'Bhopal', 8500.00 );
+	//
+	// INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (6, 'Komal',
+	// 22, 'MP', 4500.00 );
+	//
+	// SELECT * FROM CUSTOMERS;
+
 	// Config information
 	static Connection con = null;
 	private static Statement stmt;
@@ -16,7 +50,7 @@ public class database {
 
 	// SQL queries
 	String queryShowCustomers = "SELECT * FROM CUSTOMERS";
-	String queryInsertCustomer = "INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (7, 'Sang', 01, 'AB', 2000.00)";
+	String queryInsertCustomer = "INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) VALUES (7, 'Hieutran', 01, 'DaNang', 2000.00)";
 	String queryUpdateCustomer = "UPDATE Customers SET ADDRESS = 'VN', SALARY= '10000' WHERE ID = 6";
 	String queryVerifySalaryWithID = "SELECT SALARY FROM CUSTOMERS WHERE ID = 6";
 
@@ -24,8 +58,8 @@ public class database {
 	public void setUp() throws Exception {
 		try {
 			// Make the database connection
-//			String dbClass = "com.mysql.jdbc.Driver";
-//			Class.forName(dbClass).newInstance();
+			// String dbClass = "com.mysql.jdbc.Driver";
+			// Class.forName(dbClass).newInstance();
 
 			// Get connection to DB
 			Connection con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
@@ -36,7 +70,7 @@ public class database {
 			e.printStackTrace();
 		}
 	}
-
+	// print all
 	@Test(enabled = true)
 	public void testqueryShowCustomers() {
 		try {
@@ -58,8 +92,8 @@ public class database {
 			e.printStackTrace();
 		}
 	}
-
-	@Test(enabled = false)
+	// update column 6
+	@Test(enabled = true)
 	public void queryUpdateCustomer() {
 		try {
 
@@ -70,7 +104,7 @@ public class database {
 			e.printStackTrace();
 		}
 	}
-
+	// insert column
 	@Test(enabled = false)
 	public void queryInsertCustomers() {
 		try {
@@ -81,8 +115,8 @@ public class database {
 			e.printStackTrace();
 		}
 	}
-
-	@Test(enabled = false)
+	// compare value
+	@Test(enabled = true)
 	public void testqueryShowCustomersWithID() {
 		try {
 			// Get the contents of table from DB
@@ -95,7 +129,7 @@ public class database {
 				if (cusSalary.equals("4500.00")) {
 					System.out.println("Pass");
 				}
-				System.out.println("Fail, the actual value is " + cusSalary);
+				System.out.println("Failed, the actual value is " + cusSalary);
 			}
 
 		} catch (Exception e) {
@@ -110,4 +144,5 @@ public class database {
 			con.close();
 		}
 	}
+
 }
