@@ -60,12 +60,15 @@ public class database {
 			// Make the database connection
 			// String dbClass = "com.mysql.jdbc.Driver";
 			// Class.forName(dbClass).newInstance();
-
+			
+			System.out.println("Connecting to Database...");
 			// Get connection to DB
 			Connection con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 			// Statement object to send the SQL statement to the Database
 			stmt = con.createStatement();
-
+		if (con != null) {
+                    System.out.println("Connected to the Database...");
+                }
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
